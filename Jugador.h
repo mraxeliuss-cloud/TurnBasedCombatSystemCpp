@@ -13,7 +13,7 @@ class Jugador : public Personajes
 
 private:
 
-    std::vector<unique_ptr<Objetos>> inventario;
+    std::vector<std::unique_ptr<Objetos>> inventario;
 
 public:
 

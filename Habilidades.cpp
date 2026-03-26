@@ -1,5 +1,8 @@
 #include "Habilidades.h"
+
+#include "Personaje.h"
 #include <iostream>
+#include <memory>
 #include <random>
 
 std::mt19937 Habilidad::generador(std::random_device{}());

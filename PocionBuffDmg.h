@@ -19,7 +19,7 @@ public:
     PocionBuffDmg(int duracion, int cant) : duracion(duracion), cantidad(cant)
     {
     }
-    string getNombre() const override
+    std::string getNombre() const override
     {
         return nombre;
     }
@@ -29,6 +29,6 @@ public:
         objetivo->agregaEfecto(std::move(efecto));
     }
     std::string getEfectoPocion() const override { 
-    return "(+ " + to_string(cantidad) + " puntos de daño durante " + to_string(duracion) + " turnos)"; }
+    return "(+ " + std::to_string(cantidad) + " puntos de daño durante " + std::to_string(duracion) + " turnos)"; }
 };
 #endif

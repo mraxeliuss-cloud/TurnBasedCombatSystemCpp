@@ -10,7 +10,7 @@ class Rogue : public Jugador{
     public:
     
     Rogue(std::string nombre, int vida, int ataque, int defensa, int velocidad);
-    void mostrarEstado();
+    void mostrarEstado() const;
     int calcularDmg(Personajes *objetivo);
     int recibirDmg(int dmg);
     void prepararCombate() override;

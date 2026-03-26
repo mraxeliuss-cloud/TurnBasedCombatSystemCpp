@@ -20,7 +20,7 @@ private:
     bool envenenado = false;
     bool ardiendo = false;
     std::vector<Habilidad> skillSet; // ahora Habilidad es un tipo completo
-    std::vector<unique_ptr<Efectos>> estados;
+    std::vector<std::unique_ptr<Efectos>> estados;
 
 public:
     Personajes(std::string s, int v, int a, int d, int vel);

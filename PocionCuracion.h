@@ -19,7 +19,7 @@ public:
     {
     }
     std::string getNombre() const override { return nombre; }
-    std::string getEfectoPocion() const override {return "(+ " + to_string(cantidad) + " puntos de vida )";}
+    std::string getEfectoPocion() const override {return "(+ " + std::to_string(cantidad) + " puntos de vida )";}
     void usarObjeto(Personajes *objetivo) override
     {
         objetivo->recibirCura(cantidad);

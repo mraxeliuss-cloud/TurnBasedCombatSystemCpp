@@ -10,8 +10,8 @@ std::mt19937 Arquero::generador(std::random_device{}());
 Arquero::Arquero(std::string nombre, int vida, int ataque, int defensa, int velocidad, double precision)
     : Jugador(nombre, vida, ataque, defensa, velocidad), precision(precision)
 {
-    this->agregaHabilidad(Habilidad("Flecha", 12, 0, 1.0));
-    this->agregaHabilidad(Habilidad("Flecha pesada", 20, 0, 0.95));
+    this->agregaHabilidad(Habilidad("Flecha", 12, 0, 1.0, nullptr));
+    this->agregaHabilidad(Habilidad("Flecha pesada", 20, 0, 0.95, nullptr));
 }
 int Arquero::calcularDmg(Personajes *objetivo)
 {
@@ -34,11 +34,11 @@ void Arquero::mostrarEstado() const
     std::cout << "Hola Arquero " << Personajes::getNombre() << std::endl;
     if (Personajes::estaVivo())
     {
-        cout << "Tu estado actual es" << endl;
-        cout << Personajes::getVida() << endl;
+        std::cout << "Tu estado actual es" << std::endl;
+        std::cout << Personajes::getVida() << std::endl;
     }
     else
     {
-        cout << "Has muerto, bien jugado" << endl;
+        std::cout << "Has muerto, bien jugado" << std::endl;
     }
 }

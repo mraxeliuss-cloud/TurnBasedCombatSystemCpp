@@ -7,10 +7,10 @@
 using namespace std;
 Mago::Mago(std::string nombre, int vida, int ataque, int defensa, int velocidad, int fuego) : Jugador(nombre, vida, ataque, defensa, velocidad), fuego(fuego)
 {
-    this->agregaHabilidad(Habilidad("Rayo", 12, 0, 1.0));
-    this->agregaHabilidad(Habilidad("Bola de fuego", 20, 0, 0.95));
+    this->agregaHabilidad(Habilidad("Rayo", 12, 0, 1.0, nullptr));
+    this->agregaHabilidad(Habilidad("Bola de fuego", 20, 0, 0.95, nullptr));
 }
-void Mago::mostrarEstado()
+void Mago::mostrarEstado() const
 {
     cout << "Hola Mago " << Personajes::getNombre() << endl;
     cout << "Tu estado actual es: " << endl;

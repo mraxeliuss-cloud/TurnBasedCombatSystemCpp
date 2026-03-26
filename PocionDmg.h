@@ -1,5 +1,6 @@
 #ifndef POCIONDMG_H
 #define POCIONDMG_H
+
 #include <memory>
 #include <string>
 
@@ -23,7 +24,7 @@ public:
     }
     std::string getEfectoPocion() const override
     {
-    return "(- " + to_string(cantidad) + " puntos de vida al enemigo)";
+    return "(- " + std::to_string(cantidad) + " puntos de vida al enemigo)";
     }
 };
 #endif

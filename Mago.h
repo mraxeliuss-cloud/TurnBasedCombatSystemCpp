@@ -9,7 +9,7 @@ class Mago : public Jugador{
 
     public:
     Mago(std::string nombre, int vida, int ataque, int defensa, int velocidad, int fuego);
-    void mostrarEstado();
+    void mostrarEstado() const;
     int calcularDmg(Personajes *objetivo);
     int recibirDmg(int dmg);
 

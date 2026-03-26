@@ -10,8 +10,8 @@ using namespace std;
 Guerrero::Guerrero(std::string nombre, int vida, int ataque, int defensa, int velocidad, int armadura)
     : Jugador(nombre, vida, ataque, defensa, velocidad), armadura(armadura)
 {
-    this->agregaHabilidad(Habilidad("Corte", 12, 0, 1.0));
-    this->agregaHabilidad(Habilidad("Ataque pesado", 20, 0, 0.95));
+    this->agregaHabilidad(Habilidad("Corte", 12, 0, 1.0, nullptr));
+    this->agregaHabilidad(Habilidad("Ataque pesado", 20, 0, 0.95, nullptr));
 }
 
 void Guerrero::mostrarEstado() const

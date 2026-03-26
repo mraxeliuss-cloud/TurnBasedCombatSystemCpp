@@ -1,7 +1,9 @@
 #ifndef EFECTOS_H
 #define EFECTOS_H
 
-#include "Personaje.h"
+#include <memory>
+
+class Personajes;
 
 class Efectos
 {

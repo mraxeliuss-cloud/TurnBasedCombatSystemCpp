@@ -18,7 +18,7 @@ int Rogue::recibirDmg(int dmg)
 {
     return Personajes::recibirDmg(dmg);
 }
-void Rogue::mostrarEstado()
+void Rogue::mostrarEstado () const
 {
     cout << "Hola picaro " << Personajes::getNombre() << endl;
 

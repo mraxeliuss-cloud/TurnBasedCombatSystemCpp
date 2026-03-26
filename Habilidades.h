@@ -2,10 +2,12 @@
 #define HABILIDAD_H
 
 #include <string>
+#include <memory>
 #include <random>
-#include "Personaje.h"
+
 #include "Efectos.h"
 
+class Personajes;
 class Habilidad {
 private:
     std::string nombre;
@@ -15,7 +17,7 @@ private:
     static std::mt19937 generador;
     std::unique_ptr<Efectos> efecto;
 public:
-    Habilidad(const std::string& nom, int dmg, int cost = 0, double precision, std::unique_ptr<Efectos> efecto);
+    Habilidad(const std::string& nom, int dmg, int cost, double precision, std::unique_ptr<Efectos> efecto);
     int ejecutarAtaque(Personajes* usuario, Personajes* objetivo) const;
     std::string getNombre() const { return nombre; }
     int getCoste() const { return coste; }

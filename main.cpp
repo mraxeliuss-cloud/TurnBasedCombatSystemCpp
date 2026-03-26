@@ -31,10 +31,10 @@ vector<unique_ptr<Personajes>> crearEnemigos()
     return enemigos;
 }
 
-unique_ptr<Personajes> elegirPersonaje(string nombre)
+unique_ptr<Jugador> elegirPersonaje(string nombre)
 {
 
-    unique_ptr<Personajes> jugador;
+    unique_ptr<Jugador> jugador;
     cout << nombre << " selecciona tu clase" << endl;
     cout << "1. Guerrero" << endl;
     cout << "2. Arquero" << endl;
@@ -79,7 +79,7 @@ int main()
     string nombre;
     cin >> nombre;
 
-    unique_ptr<Personajes> jugador = elegirPersonaje(nombre);
+    unique_ptr<Jugador> jugador = elegirPersonaje(nombre);
     vector<unique_ptr<Personajes>> enemigos = crearEnemigos();
 
     unique_ptr<Combate> combate = make_unique<Combate>(move(jugador), move(enemigos));

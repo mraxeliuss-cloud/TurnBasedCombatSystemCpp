@@ -9,7 +9,7 @@ using namespace std;
 
 Personajes::Personajes(string s, int v, int a, int d, int r) : nombre(s), vida(v), ataqueBase(a), defensa(d), velocidad(r)
 {
-    std::vector<unique_ptr<Efectos>> estados;
+    std::vector<std::unique_ptr<Efectos>> estados;
 }
 int Personajes::recibirDmg(int dmg)
 {
